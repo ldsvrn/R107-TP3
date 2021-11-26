@@ -16,6 +16,7 @@ def factorielleWhile():
     print(factorielle)
 
 
-factorielleFor()
-print("")
-factorielleWhile()
+if input("Boucle for ou while? (for/while): ") == "for":
+    factorielleFor()
+else:
+    factorielleWhile()
