@@ -2,17 +2,16 @@ def a():
     N = int(input("Entrez N: "))
 
     nb = 0
-    for i in range(1, N+1):
+    for i in range(1, N + 1):
         nb += i
 
     print(f"La somme est {nb}!")
 
 
 def b():
-    while True:
+    exitval = ""
+    while exitval != "100":
         exitval = input("Le numéro: ")
-        if exitval == "100":
-            break
 
 
 def c():
@@ -20,7 +19,7 @@ def c():
     for i in range(10):
         while True:
             try:
-                prompt = float(input(f"Entrez un nombre entre 0 et 20 ({i+1}): "))
+                prompt = float(input(f"Entrez un nombre entre 0 et 20 ({i + 1}): "))
                 if prompt in range(21):
                     nums.append(prompt)
                     break
@@ -35,11 +34,11 @@ def c():
     superieur15 = 0
     for i in nums:
         if i < 10:
-            inferieur10+=1
+            inferieur10 += 1
         elif i in range(10, 15):
-            range1015+=1
+            range1015 += 1
         else:
-            superieur15+=1
+            superieur15 += 1
 
     print(f"{inferieur10} nb strictement inférieurs à 10.\n"
           f"{range1015} nb supérieur à 10 et inférieur strictement à 15.\n"
@@ -52,13 +51,9 @@ def d():
     N = 0
     while temp <= entree:
         N += 1
-        temp+=N
+        temp += N
 
-    print(f"N={N-1}")
-
-
-
-
+    print(f"N={N - 1}")
 
 
 print("\n a)")
