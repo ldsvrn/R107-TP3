@@ -16,18 +16,17 @@ def b():
 
 def c():
     nums = []
-    for i in range(10):
-        while True:
-            try:
-                prompt = float(input(f"Entrez un nombre entre 0 et 20 ({i + 1}): "))
-                if prompt in range(21):
-                    nums.append(prompt)
-                    break
-            except ValueError:
+    while len(nums) < 10:
+        try:
+            prompt = float(input(f"Entrez un nombre entre 0 et 20 ({len(nums) + 1}): "))
+            if prompt in range(21):
+                nums.append(prompt)
                 continue
-
-            print("ERREUR: Pas entre 0 et 20!")
+        except ValueError:
             continue
+
+        print("ERREUR: Pas entre 0 et 20!")
+        continue
 
     inferieur10 = 0
     range1015 = 0

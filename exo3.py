@@ -6,8 +6,8 @@ while True:
     try:
         nb = int(input(f"Entrez un nombre entre 0 et 100 ({rand}): "))
         if not 0 <= nb <= 100:
-            continue
             print("ERREUR: Entrez un nombre entier entre 0 et 100!")
+            continue
     except ValueError:
         print("ERREUR: Entrez un nombre entier!")
         continue
